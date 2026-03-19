@@ -6,6 +6,7 @@ const validServices = [
     'electrician', 'appliance-repair',
     'Emergency Electrical Fix', 'Wiring Installation', 'Lighting & Fixtures', 'Short Circuit Repair',
     'Washing Machine Repair', 'Refrigerator Repair', 'Oven / Stove Repair', 'Dishwasher Repair',
+    'Flatbed Towing', 'Battery Jumpstart', 'Flat Tire Change', 'Off-road Pull Out',
     'AC Repair', 'Plumbing', 'Cleaning', 'Car Recovery'
 ];
 
