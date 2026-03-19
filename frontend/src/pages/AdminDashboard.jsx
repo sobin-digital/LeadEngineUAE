@@ -29,7 +29,7 @@ const AdminDashboard = () => {
       if (dateFilter) query.push(`date=${encodeURIComponent(dateFilter)}`);
       
       const queryString = query.length > 0 ? `?${query.join('&')}` : '';
-      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/leads${queryString}`);
+      const response = await fetch(`https://leadengine-backend.onrender.com/api/leads${queryString}`);
       const data = await response.json();
       
       if (data.success) {
