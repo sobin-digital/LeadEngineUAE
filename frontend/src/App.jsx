@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ServiceLanding from './pages/ServiceLanding';
 import ThankYou from './pages/ThankYou';
@@ -40,33 +40,46 @@ function Home() {
         <div className="hero-content">
           <h1>Welcome to <span className="highlight">LeadEngine UAE</span></h1>
           <p>Connecting you to top local services in Dubai</p>
-          <button className="cta-button">Find a Service</button>
+          <button 
+            className="cta-button" 
+            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Find a Service
+          </button>
         </div>
       </header>
 
-      <section className="services-section">
+      <section className="services-section" id="services">
         <h2>Our Core Services</h2>
         <div className="services">
-          <div className="service-card">
-            <div className="service-icon">❄️</div>
-            <h3>AC Repair</h3>
-            <p>Expert AC technicians at your doorstep.</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">🔧</div>
-            <h3>Plumbing</h3>
-            <p>Fast and reliable plumbing solutions.</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">🧹</div>
-            <h3>Cleaning</h3>
-            <p>Professional cleaning for your home and office.</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">🚗</div>
-            <h3>Car Recovery</h3>
-            <p>24/7 Car breakdown and recovery assistance.</p>
-          </div>
+          <Link to="/ac-repair-dubai" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="service-card">
+              <div className="service-icon">❄️</div>
+              <h3>AC Repair</h3>
+              <p>Expert AC technicians at your doorstep.</p>
+            </div>
+          </Link>
+          <Link to="/plumber-dubai" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="service-card">
+              <div className="service-icon">🔧</div>
+              <h3>Plumbing</h3>
+              <p>Fast and reliable plumbing solutions.</p>
+            </div>
+          </Link>
+          <Link to="/cleaning-dubai" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="service-card">
+              <div className="service-icon">🧹</div>
+              <h3>Cleaning</h3>
+              <p>Professional cleaning for your home and office.</p>
+            </div>
+          </Link>
+          <a href="#services" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="service-card">
+              <div className="service-icon">🚗</div>
+              <h3>Car Recovery</h3>
+              <p>24/7 Car breakdown and recovery assistance.</p>
+            </div>
+          </a>
         </div>
       </section>
     </div>
